@@ -7,4 +7,22 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   students = [];
+  newStudentName = '';
+  newStudentDescription = '';
+
+  addApproved() {
+    this.students.push({
+      type: 'approved',
+      name: this.newStudentName,
+      description: this.newStudentDescription
+    })
+  }
+
+  addSubstitute() {
+    this.students.push({
+      type: 'substitute',
+      name: this.newStudentName,
+      description: this.newStudentDescription
+    })
+  }
 }
