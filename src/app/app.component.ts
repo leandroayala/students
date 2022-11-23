@@ -6,23 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  students = [];
-  newStudentName = '';
-  newStudentDescription = '';
+  //Aqui eu to definindo um valor para o array de students, com somente um objeto nesse array students
+  studentsList = [{type: 'approved', name: 'jose', description: 'Masculino'}];
 
-  addApproved() {
-    this.students.push({
-      type: 'approved',
-      name: this.newStudentName,
-      description: this.newStudentDescription
-    })
-  }
-
-  addSubstitute() {
-    this.students.push({
-      type: 'substitute',
-      name: this.newStudentName,
-      description: this.newStudentDescription
-    })
-  }
 }
